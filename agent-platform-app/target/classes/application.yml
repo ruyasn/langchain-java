@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: agent-platform
+
+# OpenAI（可选，未配置时需自行提供 ChatLanguageModel Bean）
+# langchain4j.open-ai.chat-model.api-key: ${OPENAI_API_KEY}
+# langchain4j.open-ai.chat-model.model-name: gpt-3.5-turbo
+
+# 日志
+logging:
+  level:
+    root: INFO
+    dev.agentplatform: DEBUG

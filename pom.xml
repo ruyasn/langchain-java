@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>dev.agent-platform</groupId>
+    <artifactId>agent-platform</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Agent Platform</name>
+    <description>智能体平台：Agent、工作流、插件、知识库、MCP</description>
+
+    <modules>
+        <module>agent-platform-common</module>
+        <module>agent-platform-agent</module>
+        <module>agent-platform-workflow</module>
+        <module>agent-platform-plugin</module>
+        <module>agent-platform-knowledge</module>
+        <module>agent-platform-mcp</module>
+        <module>agent-platform-api</module>
+        <module>agent-platform-app</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <langchain4j.version>0.34.0</langchain4j.version>
+        <mcp-sdk.version>0.17.2</mcp-sdk.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-agent</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-workflow</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-plugin</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-knowledge</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-mcp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.agent-platform</groupId>
+                <artifactId>agent-platform-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
